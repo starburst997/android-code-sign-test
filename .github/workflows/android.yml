@@ -1,0 +1,14 @@
+name: Build Android
+
+on: 
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build:
+    uses: starburst997/android-code-sign/.github/workflows/android.yml@v1
+    secrets: inherit
+    with:
+      path: 'android'
+      module: 'app'
+      version: '1.0'
